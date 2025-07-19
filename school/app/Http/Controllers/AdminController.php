@@ -11,6 +11,15 @@ class AdminController extends Controller
         return view('admin.login');
     }   
 
+    public function authenticate(Request $req)
+    {
+        $req->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+         
+    }
+
     public function dashboard()
     {
         return view('admin.dashboard');
