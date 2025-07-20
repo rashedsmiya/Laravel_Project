@@ -7,32 +7,19 @@
     <title>Laravel</title>
 </head>
 <body>
-    
-    {{-- @switch($user)
-        @case('Admin')
-                <h1>Welcome {{$user}}</h1>
-            @break 
-        @case('Editor')
-                <h1>You are {{ $user }}</h1>
-            @break
-        @default
-        <h1>You are Guest</h1>
-    @endswitch --}}
+     
+     
+     <ul>
+         <li>Home</li>
+         @auth 
+            <li>LogOut</li>
+         @endauth
+         @guest
+            <li>Login</li>
+            <li>Register</li>   
+            @endguest     
+     </ul>
 
-    {{-- @for ($i = 0; $i <=5; $i++)
-        <h1>This post number {{ $i }}</h1>  
-    @endfor --}}
-
-    @php 
-
-        $i = 1;
-
-    @endphp
-
-    @while ($i <= 5)
-            <h1>This post number {{ $i }}</h1>  
-            @php $i++; @endphp
-    @endwhile
     
 </body>
 </html>
