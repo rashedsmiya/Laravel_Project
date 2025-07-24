@@ -3,10 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AcademicYearController;
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('welcome');
 });  
+=======
+use App\Http\Controllers\StudentController;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });  
+>>>>>>> 35e5600 (add)
 
 Route::group(['prefix'=>'admin'],function(){
 
@@ -26,6 +34,5 @@ Route::group(['middleware'=>['admin.auth']],function(){
 });
 
  
- 
 
-
+                    
